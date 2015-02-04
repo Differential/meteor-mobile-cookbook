@@ -45,15 +45,15 @@ then you can run your build like this:
 
 #### In the **General** tab:
 
-- From the `Identity` section, select the appropriate team.
+1. From the `Identity` section, select the appropriate team.
 
 #### In the **Build Settings** tab:
 
-- From the `Code Signing` section, `Code Signing Identity` > `Release`, select the appropriate **Distribution** profile.
+1. From the `Code Signing` section, `Code Signing Identity` > `Release`, select the appropriate **Distribution** profile.
 
-<blockquote>
-When Xcode logs into the Apple Developer portal, it will download all the provisioning profiles. A profile is tied to an Bundle ID and a certificate (among other things). The certificate is tied to a private key that lives on a single machine.
-</blockquote>
+  <blockquote>
+  When Xcode logs into the Apple Developer portal, it will download all the provisioning profiles. A profile is tied to an      Bundle ID and a certificate (among other things). The certificate is tied to a private key that lives on a single machine.
+  </blockquote>
 
 #### Deployment Settings:
 
@@ -67,4 +67,4 @@ When Xcode logs into the Apple Developer portal, it will download all the provis
 
 #### Submit:
 
-- If validation is successful, click **Submit** and follow the prompts.
+1. If validation is successful, click **Submit** and follow the prompts.
