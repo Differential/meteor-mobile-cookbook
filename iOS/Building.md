@@ -49,20 +49,22 @@ then you can run your build like this:
 
 #### In the **Build Settings** tab:
 
-- From the `Code Signing` section, `Code Signing Identity` > `Release`, select the appropriate **Distribution** profile
+- From the `Code Signing` section, `Code Signing Identity` > `Release`, select the appropriate **Distribution** profile.
+
+<blockquote>
+When Xcode logs into the Apple Developer portal, it will download all the provisioning profiles. A profile is tied to an Bundle ID and a certificate (among other things). The certificate is tied to a private key that lives on a single machine.
+</blockquote>
 
 #### Deployment Settings:
 
-- From the Deployment section, select **iOS 7.0** for the iOS Deployment Target.
-
-- Make sure no iOS device is plugged into your computer. Select **iOS Device** from the build target menu.
+1. From the Deployment section, select **iOS 7.0** for the iOS Deployment Target.
+1. Make sure no iOS device is plugged into your computer. Select **iOS Device** from the build target menu.
 
 #### Create an Archive:
 
-- Select **Product menu > Archive**.
-
-- When the archiving is complete, the archive list opens. Click the archive you just made, and click **Validate**. Select the appropriate team. Click **Validate**.
+1. Select **Product menu > Archive**.
+1. When the archiving is complete, the archive list opens. Click the archive you just made, and click **Validate**. Select the appropriate team. Click **Validate**.
 
 #### Submit:
 
-If validation is successful, click **Submit** and follow the prompts.
+- If validation is successful, click **Submit** and follow the prompts.
