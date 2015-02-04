@@ -3,6 +3,8 @@
 ## Set Icons
 See: http://docs.meteor.com/#/full/App-icons
 
+NOTE: Icons aren't working exactly right in `mobile-config.js`. Following the above docs will fail during validation because Apple will not find the correctly sized icon files. Meteor issue and workaround: https://github.com/meteor/meteor/issues/3153
+
 ## Set Splash Screen
 See: http://docs.meteor.com/#/full/App-launchScreens
 
