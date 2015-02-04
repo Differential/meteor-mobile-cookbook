@@ -7,9 +7,14 @@
 - [Dynamic Styles](#dynamic-styles)
 
 ## Overview
-[http://devgirl.org](http://devgirl.org/2014/07/31/phonegap-developers-guid/) has a great demo of the different status bar options.
 
-For best results, you typically want the following settings:
+First, [http://devgirl.org](http://devgirl.org/2014/07/31/phonegap-developers-guid/) has a great demo of the different status bar options. Read it.
+
+Then, there are two ways to manage the status bar: 1) in CSS, and 2) using the Cordova `StatusBar` plugin. (The `StatusBar` plugin will be installed in either case.)
+
+#### Option 1
+
+Use CSS to add a 20px pad to the top of the screen. Then, for best results, you typically want the following settings:
 
 ```
 App.setPreference('StatusBarOverlaysWebView', 'true');
@@ -19,7 +24,32 @@ App.setPreference('StatusBarStyle', 'lightcontent');
 Which results in a status bar that blends with the header and has white text and icons:
 ![](/Resources/images/status-bar-lightcontent.png)
 
-----
+This is theoretically less robust, as Apple could change the status bar resolution with the next iPhone, but then again you will probably have bigger problems.
+
+#### Option 2: How to do this in Meteor using the Cordova Statusbar Plugin
+
+Meteor Cordova includes the StatusBar plugin by default. If you want to include it in a local package, in your `package.js`, include the following:
+
+```
+Cordova.depends({
+  'org.apache.cordova.statusbar': '0.1.9'
+});
+```
+
+Now you have access to the [Cordova Statusbar Plugin](https://github.com/apache/cordova-plugin-statusbar) API. However, remember to wrap any calls in a `Meteor.startup` block.
+
+```
+Meteor.startup(function () {
+  if(Meteor.isCordova){
+    StatusBar.hide();
+  }
+});
+```
+
+For more information see [Meteor Cordova Phonegap integration](https://github.com/meteor/meteor/wiki/Meteor-Cordova-Phonegap-integration).
+
+
+## `StatusBar` Preferences
 
 ## StatusBarOverlaysWebView
 
@@ -85,24 +115,3 @@ App.setPreference('StatusBarBackgroundColor', '#2C53AE');
 Sometimes you need to change the style of your status bar dynamically. For instance, if your status bar has white text and icons `StatusBarStyle = lightcontent`, but you open a modal that has a header bar with a light grey background, it would be nice to change the status bar to have black text and icons `StatusBarStyle = default`.
 
 
-## How to do this in Meteor using the Cordova Statusbar Plugin
-
-One way to manage Cordovia plugins is to use a local package. In your `package.js`, include the following:
-
-```
-Cordova.depends({
-  'org.apache.cordova.statusbar': '0.1.9'
-});
-```
-
-Now you have access to the [Cordova Statusbar Plugin](https://github.com/apache/cordova-plugin-statusbar) API. However, remember to wrap any calls in a `Meteor.startup` block.
-
-```
-Meteor.startup(function () {
-  if(Meteor.isCordova){
-    StatusBar.hide();
-  }
-});
-```
-
-For more information see [Meteor Cordova Phonegap integration](https://github.com/meteor/meteor/wiki/Meteor-Cordova-Phonegap-integration).
