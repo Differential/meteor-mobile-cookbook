@@ -8,3 +8,5 @@
 - Running `meteor run ios` will launch the simulator but not xcode. This was very flaky for me as the sim opened up a iPhone 4S, and it was a pain to switch to 5S or 6 every time. Also, HCR or re-running the app entirely, sometimes did not pick up changes. Running `meteor run ios-device` seemed to work more reliably, with the added bonus of seeing log messages in the Xcode terminal.
 
 - If you are doing iOS Cordova debugging and have the Safari Develop Menu enabled, you can access the currently active session through the built-in Safari Web Inspector. To activate, go to Develop -> (iPad || iPhone) Simulator (normally, the third menu item) and click the active session you want to connect to. Voila!
+
+- If you are getting stuck on the splash screen (or a white screen if you have no splash screen), try running the simulator with an extra switch: `meteor --production`. (From this issue: https://github.com/raix/push/issues/21)
