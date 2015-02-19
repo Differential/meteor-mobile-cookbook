@@ -23,4 +23,4 @@ To track using Google Analytics, use [this Cordova plugin](https://github.com/da
 
 ## iOS app archive fails to validate: missing icon size
 
-There is an issue with setting icons in `mobile-config.js`. Track it [here](iOS app archive fails to validate: missing icon size).
+There is an issue with setting icons in `mobile-config.js`. Track it [here](https://github.com/meteor/meteor/issues/3153).
