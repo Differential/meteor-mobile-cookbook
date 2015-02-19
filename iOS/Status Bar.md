@@ -85,6 +85,20 @@ App.setPreference('StatusBarBackgroundColor', '#2C53AE');
 Sometimes you need to change the style of your status bar dynamically. For instance, if your status bar has white text and icons `StatusBarStyle = lightcontent`, but you open a modal that has a header bar with a light grey background, it would be nice to change the status bar to have black text and icons `StatusBarStyle = default`.
 
 
+## How to hide the statusbar on app launch
+
+During runtime you can use the StatusBar.hide function, but if you want the StatusBar to be hidden at app startup, you must modify your app's Info.plist file.
+
+- After running build, go to the output directory and find `/[app]/[app]-Info.plist` file and open it.
+- Copy / Paste values below, under the first `<dict>` tag.
+
+```
+<key>UIStatusBarHidden</key>
+<true/>
+<key>UIViewControllerBasedStatusBarAppearance</key>
+<false/>
+```
+
 ## How to do this in Meteor using the Cordova Statusbar Plugin
 
 One way to manage Cordovia plugins is to use a local package. In your `package.js`, include the following:
