@@ -20,3 +20,7 @@ If you experience a "Xcode: Process launch failed - Security" error in Xcode fol
 ## Google Analytics
 
 To track using Google Analytics, use [this Cordova plugin](https://github.com/danwilson/google-analytics-plugin) and be sure to set up a GA Property of type Mobile app.
+
+## iOS app archive fails to validate: missing icon size
+
+There is an issue with setting icons in `mobile-config.js`. Track it [here](iOS app archive fails to validate: missing icon size).
