@@ -57,7 +57,9 @@ then you can run your build like this:
 
 #### Deployment Settings:
 
-1. From the Deployment section, select **iOS 7.0** for the iOS Deployment Target.
+1. From the Deployment section, select **iOS 7.0** for the iOS `Deployment Target`.
+1. Set your `Devices`, select iPhone, iPad, or Universal if you've built in support for both.
+   <img src="https://dl.dropboxusercontent.com/u/8180213/Differential/xcodeproj.png">
 1. Make sure no iOS device is plugged into your computer. Select **iOS Device** from the build target menu.
 
 #### Create an Archive:
