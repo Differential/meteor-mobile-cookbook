@@ -1,5 +1,8 @@
 # Building for Android
 
+## Getting Started
+Make sure you have all of the required software installed on your local machine. Follow these [instructions](https://github.com/meteor/meteor/wiki/Mobile-Development-Install:-Android-on-Mac).
+
 ## Build the App
 `$ meteor build ../<app-name>-build --server http://<app-server> --mobile-settings settings.json`
 
