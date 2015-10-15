@@ -3,6 +3,23 @@
 ## Getting Started
 Make sure you have all of the required software installed on your local machine. Follow these [instructions](https://github.com/meteor/meteor/wiki/Mobile-Development-Install:-Android-on-Mac).
 
+## Setup mobile-config.js
+
+Insure you have a `buildNumber` property added to your `App.info` settings. For iOS, this can be created on the fly in XCode, but for Android APK's, it needs to be set here.
+
+```
+// inside mobile-config.js
+App.info({
+  ...
+  version: '1.0.0',
+  buildNumber: '100' // has to be a number
+})
+```
+
+**Note:** 
+For iOS, we typically increment the build number from 1 to 2 and so on. However, we noticed some issues when uploading APK's to Google play that it preferred a larger number. Test it out, but you might have to start the `buildNumber` at 100 or 101.
+
+
 ## Build the App
 `$ meteor build ../<app-name>-build --server http://<app-server> --mobile-settings settings.json`
 
