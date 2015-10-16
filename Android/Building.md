@@ -5,7 +5,7 @@ Make sure you have all of the required software installed on your local machine.
 
 ## Setup mobile-config.js
 
-Insure you have a `buildNumber` property added to your `App.info` settings inside your `mobile-config.js` file. For iOS, this can be created on the fly in XCode, but for Android APK's, it needs to be set here.
+Ensure you have a `buildNumber` property added to your `App.info` settings inside your `mobile-config.js` file. For iOS, this can be created on the fly in XCode, but for Android APK's, it needs to be set here.
 
 ```
 // inside mobile-config.js
